@@ -3,12 +3,11 @@
 #include <DHT.h>		// importa la Librerias DHT
 #include <DHT_U.h>
 
-int SENSOR = 2;			// pin DATA de DHT22 a pin digital 2
+int SENSOR = 2;			// pin DATA de DHT11 a pin digital 2
 int TEMPERATURA;
 int HUMEDAD;
 
-DHT dht(SENSOR, DHT22);		// creacion del objeto, cambiar segundo parametro
-				// por DHT11 si se utiliza en lugar del DHT22
+DHT dht(SENSOR, DHT11);		// creacion del objeto
 void setup(){
   Serial.begin(9600);		// inicializacion de monitor serial
   dht.begin();			// inicializacion de sensor
